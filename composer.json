@@ -1,0 +1,13 @@
+{
+    "name": "happypixels/laravel-shopr-docs",
+    "description": "Documentation for the laravel-shopr package",
+    "authors": [
+        {
+            "name": "Mattias Persson",
+            "email": "mattias@happypixels.se"
+        }
+    ],
+    "require": {
+        "tightenco/jigsaw": "^1.2"
+    }
+}
