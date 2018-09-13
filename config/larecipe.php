@@ -52,7 +52,7 @@ return [
 
     'settings' => [
         'auth'  => false,
-        'ga_id' => ''
+        'ga_id' => 'UA-38537229-2'
     ],
 
     /*
@@ -69,7 +69,7 @@ return [
     */
 
     'cache'       => [
-        'enabled' => false,
+        'enabled' => true,
         'period'  => 5
     ],
 
@@ -130,8 +130,8 @@ return [
     */
 
     'seo'             => [
-        'author'      => '',
-        'description' => '',
-        'keywords'    => ''
+        'author'      => 'Mattias Persson, Happy Pixels Media',
+        'description' => 'A developer-friendly e-commerce foundation for your Laravel app',
+        'keywords'    => 'Shopr, Laravel, Webshop, E-commerce'
     ]
 ];
