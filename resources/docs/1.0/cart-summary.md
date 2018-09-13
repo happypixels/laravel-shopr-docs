@@ -1,4 +1,4 @@
-# Cart summary
+# Retrieving cart details
 
 ---
 
@@ -44,7 +44,7 @@ The cart summary will return the items added to the cart, as well as the total p
 <a name="section-2"></a>
 ### Only retrieving the cart count
 
-In some cases you may wish to only get quantity of all items added to the cart. This is also possible:
+In some cases you may wish to only get the quantity of all items added to the cart. This is also possible:
 
 | METHOD | URI   |
 | :      | :-    |

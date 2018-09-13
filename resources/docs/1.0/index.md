@@ -6,8 +6,12 @@
 - ## Preparations
     - [Shoppable models](/{{version}}/models)
 - ## Working with the cart
-    - [Cart summary](/{{version}}/cart-summary)
+    - [Cart details](/{{version}}/cart-summary)
     - [Adding items](/{{version}}/cart-adding-items)
     - [Updating items](/{{version}}/cart-updating-items)
     - [Deleting items](/{{version}}/cart-deleting-items)
     - [Clearing the cart](/{{version}}/clearing-the-cart)
+- ## Checkout
+    - [Overview](/{{version}}/checkout-overview)
+    - [Paying](/{{version}}/checkout-paying)
+    - [Order receipt](/{{version}}/checkout-receipt)
