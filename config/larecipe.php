@@ -113,7 +113,7 @@ return [
             //'css/custom.css',
         ],
         'additional_js'  => [
-            //'js/custom.js',
+            'js/sidebar.js',
         ],
     ],
 
