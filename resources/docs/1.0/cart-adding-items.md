@@ -75,7 +75,7 @@ When adding an item, the price of the main shoppable will be combined with the p
 The options you provide are completely free. You can append any key-value pairs you'd like.
 
 ### Quantity
-The quantity will default to 1 unless you provide a different value.
+The quantity will default to 1 unless you provide a different value. If you add an item that's identical to an item that already exists in the cart, the quantity will instead be incremented on that one. Identifying identical items takes options and sub items into account.
 
 ### Sub items
 Sub items follow the same structure as the main item. You must provide a shoppable id and class namespace, but you may also provide options and quantity if you'd like.
