@@ -7,7 +7,7 @@
     - [Shoppable models](/{{version}}/models)
 - ## Working with the cart
     - [Cart summary](/{{version}}/cart-summary)
-    - [Adding items (todo)](/{{version}}/cart-adding-items)
-    - [Updating items (todo)](/{{version}}/cart/updating-items)
+    - [Adding items](/{{version}}/cart-adding-items)
+    - [Updating items](/{{version}}/cart-updating-items)
     - [Deleting items](/{{version}}/cart-deleting-items)
     - [Clearing the cart](/{{version}}/clearing-the-cart)
