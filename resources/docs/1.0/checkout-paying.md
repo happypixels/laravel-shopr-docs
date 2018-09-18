@@ -1,11 +1,11 @@
 # Checkout - paying
 
 ---
+- [Implementing Stripe](/{{version}}/checkout-paying#gateway-stripe)
 
 <a name="section-1"></a>
 
-Before you make the charge request, you may need a gateway specific implementation.  
-For example, if you're using `Stripe`, you may want to use their modal for entering card details. When done, you'll receive a token from `Stripe` which you'll pass along to our charge endpoint.
+Before you make the charge request, you may need a gateway specific implementation in between. You can read more about how to implement each gateway further down.
 
 | METHOD | URI   |
 | :      | :-    |
@@ -43,3 +43,10 @@ For example, if you're using `Stripe`, you may want to use their modal for enter
     "message": "Unable to process your order."
 }
 ```
+
+### Gateway specific implementations
+
+##### Stripe
+<a name="gateway-stripe"></a>
+When using `Stripe` to process purchases, you first need to open their [Checkout component](https://stripe.com/checkout) to let the user enter their card details and confirm the purchase. When done, you will receive a token which should be included in your request to the `/api/shopr/checkout/charge` endpoint as the `token` parameter.  
+If you're using Vue, we highly recommend using [this wrapper component for Stripe Checkout](https://github.com/jofftiquez/vue-stripe-checkout). You can also check out [the demo implementation](https://github.com/happypixels/laravel-shopr-demo/blob/master/resources/js/components/PaymentOptions/Stripe.vue).
