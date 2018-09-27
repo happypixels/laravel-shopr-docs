@@ -15,13 +15,15 @@ Adding items to the cart will return the full cart summary. You can add sub item
 {
     shoppable_type: 'App\\Models\\Camera', // required
     shoppable_id: 1, // required
-    quantity: 1,
+    quantity: 1, // optional: will default to 1 if not provided
+    price: 50, // optional: will default to the shoppable price if not provided
     options: {
         color: 'Silver',
     },
     sub_items: [{
         shoppable_type: 'App\\Models\\Lens', // required when providing a sub item
         shoppable_id: 1, // required when providing a sub item
+        price: 20, // optional
         options: {
             color: 'Space grey'
         }
@@ -52,24 +54,27 @@ Adding items to the cart will return the full cart summary. You can add sub item
 		    "shoppableId": 1,
             "options": {
                 "color": "Space grey"
-            }
+            },
+            "total": 20,
+            "price": 20,
+            "price_formatted": "$20,00"
         }],
-		"total": 199,
-		"price": 199,
-		"price_formatted": "$199,00"
+		"total": 70, // includes the sub items
+		"price": 50, // overridden in the request example above, the shoppable price is ignored
+		"price_formatted": "$50,00"
 	}],
-	"sub_total": 199,
-	"sub_total_formatted": "$199,00",
+	"sub_total": 70,
+	"sub_total_formatted": "$70,00",
 	"tax_total": 0,
 	"tax_total_formatted": "$0,00",
-	"total": 199,
-	"total_formatted": "$199,00",
+	"total": 70,
+	"total_formatted": "$70,00",
 	"count": 1
 }
 ```
 
 ### Price calculations
-When adding an item, the price of the main shoppable will be combined with the prices of any sub item shoppables. You may override the main shoppable price by providing a `price` attribute on the request body. For example, you may have an option that costs more or less than the default price.
+When adding an item, the price of the main shoppable will be combined with the prices of any sub item shoppables. You may override the shoppable price by providing a `price` attribute on the request body. For example, you may have an option that costs more or less than the default price. The behavior is the same for both items and sub items.
 
 ### Options
 The options you provide are completely free. You can append any key-value pairs you'd like.
