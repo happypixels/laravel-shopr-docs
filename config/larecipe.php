@@ -69,7 +69,7 @@ return [
     */
 
     'cache'       => [
-        'enabled' => true,
+        'enabled' => false,
         'period'  => 5
     ],
 
@@ -110,7 +110,7 @@ return [
         'theme'          => 'light',
         'back_to_top'    => true,
         'additional_css' => [
-            //'css/custom.css',
+            'css/custom.css',
         ],
         'additional_js'  => [
             'js/sidebar.js',

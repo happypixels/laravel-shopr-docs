@@ -15,3 +15,5 @@
     - [Overview](/{{version}}/checkout-overview)
     - [Paying](/{{version}}/checkout-paying)
     - [Order receipt](/{{version}}/checkout-receipt)
+- ## Events
+    - [Full list of events](/{{version}}/events-list)
