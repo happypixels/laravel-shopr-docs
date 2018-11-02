@@ -21,7 +21,7 @@ Event::listen('shopr.order.created', function ($order) {
 **shopr.orders.created**  
 Fired when an order is successfully created. Passes the `Happypixels\Shopr\Models\Order` object to your listener.
 
-**shopr.cart.items.created**  
+**shopr.cart.items.added**  
 Fired when an item is added to the cart. Passes the `Happypixels\Shopr\CartItem` object to your listener.
 
 **shopr.cart.items.updated**  
