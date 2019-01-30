@@ -32,11 +32,12 @@ return [
     */
 
     'versions'      => [
-        'default'   => '1.1',
+        'default'   => '1.2',
         'published' => [
+            '1.2',
+            '1.1',
             '1.0',
-            '1.1'
-        ]
+        ],
     ],
 
     /*
@@ -53,7 +54,7 @@ return [
 
     'settings' => [
         'auth'  => false,
-        'ga_id' => 'UA-38537229-2'
+        'ga_id' => 'UA-38537229-2',
     ],
 
     /*
@@ -71,7 +72,7 @@ return [
 
     'cache'       => [
         'enabled' => false,
-        'period'  => 5
+        'period'  => 5,
     ],
 
     /*
@@ -88,7 +89,7 @@ return [
 
     'repository'   => [
         'provider' => 'github',
-        'url'      => 'https://github.com/happypixels/laravel-shopr'
+        'url'      => 'https://github.com/happypixels/laravel-shopr',
     ],
 
     /*
@@ -133,6 +134,6 @@ return [
     'seo'             => [
         'author'      => 'Mattias Persson, Happy Pixels Media',
         'description' => 'A developer-friendly e-commerce foundation for your Laravel app',
-        'keywords'    => 'Shopr, Laravel, Webshop, E-commerce'
-    ]
+        'keywords'    => 'Shopr, Laravel, Webshop, E-commerce',
+    ],
 ];

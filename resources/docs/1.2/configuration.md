@@ -1,0 +1,92 @@
+# Configuration
+
+---
+
+<a name="section-1"></a>
+
+We'll now go through the configuration file in detail. Some values need to be configured for everything to work properly, so don't skip this step.
+
+### Templates
+```php
+'templates' => [
+    'cart'               => '',
+    'checkout'           => '',
+    'order-confirmation' => '',
+],
+```
+The template paths for the default views usually needed in a webshop. Defined the way you'd usually define a view path, such as `path.to.my.view`. If left empty, that route will not be registered.  
+The `order-confirmation` route will have access to an `$order` variable, to make it easy for you to display the necessary order information.
+
+### Models
+```php
+'models' => [
+    'Order' => Happypixels\Shopr\Models\Order::class,
+    'OrderItem' => Happypixels\Shopr\Models\OrderItem::class,
+],
+```
+You may use your own models to extend the orders/order items. Read more about this on the Customization page.
+
+### Currency
+```php
+'currency' => 'USD',
+```
+The currency defines how money will be formatted. Formatted money values will be returned as `attribute_formatted`, such as `$order->total_formatted`.  
+The currency must be defined using the ISO4217 format, see https://www.xe.com/iso4217.php for more information and a full currency list.
+
+### Tax
+```php
+'tax' => 0,
+```
+This defines the tax percentage which will be calculated on all shoppable items.
+
+### Emails
+```php
+'admin_emails' => [],
+
+'mail' => [
+    'customer' => [
+        'order_placed' => ['enabled' => true, 'template' => null, 'subject' => null],
+    ],
+    'admins' => [
+        'order_placed' => ['enabled' => true, 'template' => null, 'subject' => null],
+    ],
+],
+```
+The `admin_emails` holds an array of email addresses to the administrators of the site.
+
+The `mail` setting configures various automated emails. For example, when an order is placed you may want to send an email both to the customer and to the administrators.
+You may define a custom template in the usual view path format (`path.to.view`). These views will have access to the `$order` variable. However, default templates are used as fallback. You may also define a specific subject if you'd like. 
+
+### Discount coupon validation
+```php
+'discount_coupons' => [
+    'validation_rules' => [
+        Happypixels\Shopr\Rules\Cart\CartNotEmpty::class,
+        Happypixels\Shopr\Rules\Discounts\OnlyOneCouponPerOrder::class,
+        Happypixels\Shopr\Rules\Discounts\CouponHasNotBeenApplied::class,
+        Happypixels\Shopr\Rules\Discounts\CouponExists::class,
+        Happypixels\Shopr\Rules\Discounts\DateIsWithinCouponTimespan::class,
+        Happypixels\Shopr\Rules\Discounts\CartValueAboveCouponLimit::class
+    ]
+],
+```
+These rules are validated when a customer attempts to add a discount coupon to their cart. The default rules make sure the following statements are true:
+1. The cart contains shoppable items
+2. There are no other discount coupons applied to the cart
+3. The desired coupon hasn't already been applied
+4. The desired coupon exists in the database
+5. The current date and time is within the desired coupon's valid timespan
+6. The cart value is higher than the specified limit. If no limit is set on the coupon, the cart value must be higher than the coupon value so the total price doesn't become negative
+
+You may add or remove any rules from this list to make sure it fits your needs.
+
+### Payment gateways
+```php
+'gateways' => [
+    'stripe' => [
+        'publishable_key' => env('STRIPE_PUBLISHABLE_KEY', ''),
+        'api_key'         => env('STRIPE_SECRET_KEY', '')
+    ]
+]
+```
+This setting holds the details about the payment gateways you wish to enable. We currently support `Stripe` out of the box.
