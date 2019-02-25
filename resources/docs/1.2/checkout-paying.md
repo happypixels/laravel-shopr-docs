@@ -31,7 +31,8 @@ Before you make the charge request, you may need a gateway specific implementati
 
 ```text
 {
-    "redirect": "https://your-app.com/order-confirmation?token=uniqueOrderToken"
+    "redirect": "https://your-app.com/order-confirmation?token=uniqueOrderToken",
+    "token": "uniqueOrderToken"
 }
 ```
 
@@ -40,7 +41,8 @@ Before you make the charge request, you may need a gateway specific implementati
 ```text
 // Response code: 400
 {
-    "message": "Unable to process your order."
+    "message": "The payment failed.",
+    "reason": "Insufficient funds"
 }
 ```
 
