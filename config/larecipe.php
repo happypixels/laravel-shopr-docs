@@ -32,8 +32,9 @@ return [
     */
 
     'versions'      => [
-        'default'   => '1.2',
+        'default'   => '1.3',
         'published' => [
+            '1.3',
             '1.2',
             '1.1',
             '1.0',
@@ -110,7 +111,13 @@ return [
         'logo'           => '', // e.g.: /images/logo.svg
         'fav'            => '', // e.g.: /fav.png
         'theme'          => 'light',
+        'code'           => 'dark',
         'back_to_top'    => true,
+        'colors'         => [
+            'primary'    => '#787AF6',
+            'secondary'  => '#2b9cf2',
+            'selection'  => '#f4f5f7',
+        ],
         'additional_css' => [
             'css/custom.css',
         ],

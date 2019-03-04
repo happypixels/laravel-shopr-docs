@@ -1,0 +1,26 @@
+- ## Getting started
+    - [Overview](/{{version}}/overview)
+    - [Requirements](/{{version}}/requirements)
+    - [Upgrade guide](/{{version}}/upgrade-guide)
+    - [Installation & setup](/{{version}}/installation)
+    - [Configuration](/{{version}}/configuration)
+- ## Preparations
+    - [Shoppable models](/{{version}}/preparations/models)
+- ## Working with the cart
+    - [Cart details](/{{version}}/cart/summary)
+    - [Adding items](/{{version}}/cart/adding-items)
+    - [Updating items](/{{version}}/cart/updating-items)
+    - [Deleting items](/{{version}}/cart/deleting-items)
+    - [Clearing the cart](/{{version}}/cart/clearing-the-cart)
+- ## Discount coupons
+    - [Applying a coupon](/{{version}}/discounts/apply)
+    - [Validating a coupon](/{{version}}/discounts/validation)
+- ## Checkout
+    - [Overview](/{{version}}/checkout/overview)
+    - [Paying](/{{version}}/checkout/paying)
+    - [Order receipt](/{{version}}/checkout/receipt)
+- ## Events
+    - [Full list of events](/{{version}}/events/list)
+- ## Customizations
+    - [Order models](/{{version}}/customization/models)
+    - [Money formatter](/{{version}}/customization/money-formatter)
