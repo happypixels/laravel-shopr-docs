@@ -1,4 +1,4 @@
-# Upgrading from 1.1 to 1.2
+# Upgrading from 1.2 to 1.3
 
 ---
 
