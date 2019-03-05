@@ -29,4 +29,3 @@ class OrderItem extends ShoprOrderItem
 
 }
 ```
-That's it!

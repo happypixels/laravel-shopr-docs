@@ -21,6 +21,6 @@
     - [Order receipt](/{{version}}/checkout/receipt)
 - ## Events
     - [Full list of events](/{{version}}/events/list)
-- ## Customizations
+- ## Customizing
     - [Order models](/{{version}}/customization/models)
-    - [Money formatter](/{{version}}/customization/money-formatter)
+    - [Money formatting](/{{version}}/customization/money-formatter)

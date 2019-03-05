@@ -1,4 +1,4 @@
-# Custom Money Formatter
+# Custom Money Formatting
 
 ---
 
@@ -8,12 +8,7 @@
 
 <a name="setup"></a>
 ### Setup
-You may use your own money formatter. To do so, configure the `money_formatter` key of the configuration file:
-```php
-'money_formatter' => App\MyFormatter::class,
-```
-Your formatter should extend the package's Formatter-class, like so:
-
+You may use your own money formatter. To do so, create a custom formatter-class:
 ```php
 namespace App;
 
@@ -23,6 +18,13 @@ class MyFormatter extends Formatter
 {
 
 }
+```
+> {warning} Make sure your formatter extends the package formatter.
+
+Then, configure your formatter in the `money_formatter` key of the configuration file:
+
+```php
+'money_formatter' => App\MyFormatter::class,
 ```
 
 <a name="options"></a>
@@ -49,7 +51,7 @@ class MyFormatter extends Formatter
     public $decimalCount = 2;
 }
 ```
-> {info} If you leave out any or all of these options, the defaults based on the app locale and configured currency will be used.
+> {primary} If you leave out any or all of these options, the defaults based on the app locale and configured currency will be used.
 
 <a name="free-formatting"></a>
 ### Formatting with more freedom
