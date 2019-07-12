@@ -24,3 +24,5 @@
 - ## Customizing
     - [Order models](/{{version}}/customization/models)
     - [Money formatting](/{{version}}/customization/money-formatter)
+- ## Guides & how-to's
+    - [Add shipping options](https://medium.com/@mattias_56969/laravel-shopr-how-to-add-shipping-to-your-checkout-49ba3723657e?sk=9367a086352c1ee1199557bdf35ab342)
