@@ -34,6 +34,7 @@ return [
     'versions'      => [
         'default'   => '1.6',
         'published' => [
+            '2.0-alpha',
             '1.6',
             '1.5',
             '1.4',
@@ -142,7 +143,7 @@ return [
     */
 
     'seo'             => [
-        'author'      => 'Mattias Persson, Happy Pixels Media',
+        'author'      => 'Mattias Persson, Happy Pixels AB',
         'description' => 'A developer-friendly e-commerce foundation for your Laravel app',
         'keywords'    => 'Shopr, Laravel, Webshop, E-commerce',
     ],
